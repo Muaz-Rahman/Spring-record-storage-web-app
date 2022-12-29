@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>People Listing</title>
+<!--    <link th:href="@{/styling/index.css}" rel="stylesheet" />-->
+    <link href="../static/styling/index.css" rel="stylesheet" />
+</head>
+
+<body style="text-align: center">
+<h2>List of people added in the service:</h2>
+
+<div style="margin-left: 10%">
+    <table style="width: 50%">
+        <thead>
+        <tr>
+            <th style="border: solid 1px">Person ID</th>
+            <th style="border: solid 1px">Name</th>
+            <th style="border: solid 1px">Email</th>
+            <th style="border: solid 1px">Date of birth</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person: ${persons}">
+            <td style="border: solid 1px" th:text="${person.person_id}">1</td>
+            <td style="border: solid 1px" th:text="${person.name}">John Doe</td>
+            <td style="border: solid 1px" th:text="${person.email}">jdoe@email.com</td>
+            <td style="border: solid 1px" th:text="${person.dob}">23-09-1998</td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+
+</body>
+</html>

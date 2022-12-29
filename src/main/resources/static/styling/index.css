@@ -1,0 +1,26 @@
+*{
+    background-color: #7e139b;
+    font-family: sans-serif;
+    color: white;
+}
+h1{
+    padding-bottom: 3%;
+}
+
+a{
+    font-size: 1.3rem;
+    color: #7b93e7;
+    text-decoration: none;
+}
+
+#information,#link,#link2{
+    text-align: center;
+}
+
+#link,#link2{
+    margin-top: 5%;
+}
+
+hr{
+    max-width: 50%;
+}
