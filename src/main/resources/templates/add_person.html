@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Person Form</title>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/styling/template/common.css}" rel="stylesheet" />
+    <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h2 class="mt-lg-4">List of people added in the service:</h2>
+
+<div class="mt-lg-5">
+    <form action="#" th:action="@{/add_person}" th:object="${person}" method="post">
+        <p>
+            Name:
+            <input th:type="text" th:field="*{name}">
+        </p>
+        <p>
+            Email:
+            <input th:type="text" th:field="*{email}">
+        </p>
+        <p>
+            Date of birth:
+            <input th:type="text" placeholder="09-31-1998" th:field="*{dob}">
+        </p>
+        <button type="submit" value="Submit">Add a new person</button>
+    </form>
+</div>
+
+</body>
+</html>
